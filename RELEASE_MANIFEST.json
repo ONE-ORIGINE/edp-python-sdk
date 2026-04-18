@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "channel": "stable",
+  "protocol_version": "1.0",
+  "generated_at": 1776526335.2868197,
+  "schema_count": 33,
+  "modules": [
+    {
+      "name": "edp_sdk",
+      "version": "2.0.0",
+      "description": "Canonical runtime, semantics, protocol, policy, memory, analytics, persistence and maintenance.",
+      "exports": [
+        "Environment",
+        "Context",
+        "Element",
+        "Action",
+        "Reaction",
+        "MepGateway",
+        "MultiAgentRuntime",
+        "EnvironmentCanonicalBody",
+        "Savoir",
+        "Contextualizer"
+      ],
+      "commands": [
+        "edp-demo",
+        "edp-cli",
+        "edp-release-check",
+        "edp-build-release"
+      ],
+      "dependencies": [
+        "drone_edp",
+        "mep_tools"
+      ]
+    },
+    {
+      "name": "drone_edp",
+      "version": "2.0.0",
+      "description": "Drone specialization over EDP + MEP + SAVOIR.",
+      "exports": [
+        "DroneElement",
+        "DroneSwarmSDK",
+        "PoseSE3"
+      ],
+      "commands": [],
+      "dependencies": [
+        "edp_sdk"
+      ]
+    },
+    {
+      "name": "mep_tools",
+      "version": "2.0.0",
+      "description": "EnvLang, schema tooling and release metadata/build tooling for MEP environments.",
+      "exports": [
+        "EnvLangParser",
+        "EnvLangCompiler",
+        "EnvLangFormalCompiler",
+        "ProtocolSchemaRegistry"
+      ],
+      "commands": [
+        "edp-build-release"
+      ],
+      "dependencies": [
+        "edp_sdk"
+      ]
+    }
+  ],
+  "notes": [
+    "stable canonical release built from canonical ENVX body",
+    "multi-agent runtime, governance, distributed plans and protocol validation included",
+    "generation-2 stable line with contextual matrix, learning projection and persistent native stores"
+  ]
+}

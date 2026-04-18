@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "EDP Python SDK"
+message: "If you use this software, please cite it using this metadata."
+authors:
+  - family-names: "ONE-ORIGINE"
+    given-names: ""
+version: 2.0.0
+license: "I.S. License"
+repository-code: "https://github.com/ONE-ORIGINE/edp-python-sdk"

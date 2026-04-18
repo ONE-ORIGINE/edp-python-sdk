@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edp-python-sdk"
+version = "2.0.0"
+description = "Environment Design Pattern + MEP + SAVOIR Python SDK with multi-agent orchestration and drone specialization"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "ONE-ORIGINE / ImperialSchool Research"}]
+license = "LicenseRef-IS-License"
+license-files = ["LICENSE"]
+keywords = ["edp", "mep", "savoir", "causal-ai", "multi-agent", "drone", "envlang"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: System :: Distributed Computing",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ONE-ORIGINE/edp-python-sdk"
+Repository = "https://github.com/ONE-ORIGINE/edp-python-sdk"
+Issues = "https://github.com/ONE-ORIGINE/edp-python-sdk/issues"
+Documentation = "https://github.com/ONE-ORIGINE/edp-python-sdk/tree/main/docs"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "build>=1.2",
+  "twine>=5.1",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+edp-demo = "examples.demo:main"
+edp-cli = "examples.cli:main"
+edp-release-check = "mep_tools.release_checks:main"
+edp-build-release = "mep_tools.release_build:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["edp_sdk*", "drone_edp*", "mep_tools*", "mep_llm*", "examples*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

@@ -1,0 +1,3 @@
+let case_id:str = "INC-100" ;
+open_case: do alice :: case.open case=${var.case_id} severity=high ctx=Main => opened ;
+if result.open_case.success = true then { assign_case: do bob :: case.assign case=${var.case_id} target=bob ctx=Dispatch }

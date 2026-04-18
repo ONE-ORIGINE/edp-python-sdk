@@ -1,0 +1,9 @@
+name: Feature request
+description: Propose a new capability for EDP, MEP, SAVOIR, EnvLang or drone SDK.
+body:
+  - type: textarea
+    id: summary
+    attributes: {label: Summary}
+  - type: textarea
+    id: rationale
+    attributes: {label: Architectural rationale}
