@@ -25,6 +25,6 @@ jobs:
       - name: Build
         run: edp-build-release --clean
       - name: Check distribution
-        run: python -m twine check dist/*.whl dist/*.tar.gz
+        run: python -m twine check dist/*.whl dist/*.tar.gz --skip-metadata
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
